@@ -92,9 +92,7 @@ class DataAuditTest(unittest.TestCase):
         rows = []
         for index, (name, color, subject, label, split) in enumerate(fixtures):
             relative_path, checksum = self._create_image(name, color)
-            rows.append(
-                self._row(f"image-{index}", subject, label, split, relative_path, checksum)
-            )
+            rows.append(self._row(f"image-{index}", subject, label, split, relative_path, checksum))
         self._write_manifest(rows)
 
         report = audit_manifest(self.manifest_path, self.data_root)

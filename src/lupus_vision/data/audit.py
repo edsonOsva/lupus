@@ -8,9 +8,10 @@ import hashlib
 import json
 import sys
 from collections import Counter, defaultdict
+from collections.abc import Iterable
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 from urllib.parse import urlparse
 
 from PIL import Image, UnidentifiedImageError
