@@ -20,6 +20,7 @@ dev = [
 
 [project.scripts]
 lupus-data-audit = "lupus_vision.data.audit:main"
+lupus-scin-inventory = "lupus_vision.data.scin_inventory:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

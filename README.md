@@ -42,6 +42,20 @@ lupus-data-audit \
 
 El comando termina con código distinto de cero si encuentra un bloqueo. No debe iniciarse ningún entrenamiento mientras `ready_for_training` sea `false`.
 
+## Inventario inicial de SCIN
+
+SCIN es una fuente candidata, no un dataset aprobado para entrenamiento. Después de obtener sus dos CSV oficiales:
+
+```bash
+lupus-scin-inventory \
+  --cases /ruta/segura/scin/scin_cases.csv \
+  --labels /ruta/segura/scin/scin_labels.csv \
+  --report artifacts/scin-inventory.json \
+  --candidates artifacts/scin-candidates.csv
+```
+
+El comando selecciona casos `Cutaneous lupus` de cabeza/cuello con imágenes y evaluación dermatológica gradable. El resultado requiere revisión visual y permanece con `training_status: not_approved`. Consulta [docs/scin-data-source.md](docs/scin-data-source.md).
+
 ## Pruebas
 
 ```bash
